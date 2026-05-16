@@ -250,7 +250,7 @@ export const sidebarNavs = authUser => {
   const children = [];
   children.push(homeMenu);
 
-  if (authUser !== null) {
+  if (authUser !== null && authUser.roles) {
     var roles = JSON.parse(authUser.roles);
     roles.sort((a, b) => a.role_order - b.role_order);
     for (let i = 0; i < roles.length; i++) {
