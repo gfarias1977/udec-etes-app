@@ -251,7 +251,8 @@ export const sidebarNavs = authUser => {
   children.push(homeMenu);
 
   if (authUser !== null && authUser.roles) {
-    var roles = JSON.parse(authUser.roles);
+    var parsed = typeof authUser.roles === 'string' ? JSON.parse(authUser.roles) : authUser.roles;
+    var roles = Array.isArray(parsed) ? parsed : [parsed];
     roles.sort((a, b) => a.role_order - b.role_order);
     for (let i = 0; i < roles.length; i++) {
       switch (roles[i].role_name) {
