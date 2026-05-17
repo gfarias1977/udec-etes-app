@@ -242,7 +242,7 @@ const AddCourseRoomLayout = ({ open, onCloseDialog }) => {
                 id="roomsLayouts"
                 options={roomsLayouts}
                 value={roomLayoutText}
-                getOptionLabel={option => option.rlayOptionLabel}
+                getOptionLabel={option => option.rlayOptionLabel ?? ''}
                 style={{ width: '100%' }}
                 //defaultValue={null}
                 renderInput={params => (
@@ -267,7 +267,7 @@ const AddCourseRoomLayout = ({ open, onCloseDialog }) => {
                 id="courses"
                 options={courses}
                 value={courseText}
-                getOptionLabel={option => option.coursOptionLabel}
+                getOptionLabel={option => option.coursOptionLabel ?? ''}
                 style={{ width: '100%' }}
                 renderInput={params => (
                   <TextField

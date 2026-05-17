@@ -249,12 +249,7 @@ const AddEditStandard = ({ open, onCloseDialog }) => {
   }, []);
 
   useEffect(() => {
-    if (currentStandardCourse[0].standardId !== null) {
-      setRelays(currentStandardCourse[0]?.relay);
-      //setRelays(currentStandardCourse[0]);
-    } else {
-      setRelays([]);
-    }
+    setRelays(currentStandardCourse?.[0]?.relay ?? []);
   }, [currentStandardCourse]);
 
   useEffect(

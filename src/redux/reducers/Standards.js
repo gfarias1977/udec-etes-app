@@ -75,7 +75,7 @@ export default (state = INIT_STATE, action) => {
     case GET_STANDARD_COURSE: {
       return {
         ...state,
-        currentStandardCourse: action.payload,
+        currentStandardCourse: [action.payload],
       };
     }
     case DELETE_STANDARD_COURSE_ITEM: {

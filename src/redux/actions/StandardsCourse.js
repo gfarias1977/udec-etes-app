@@ -28,7 +28,7 @@ export const getStandardCourses = (stdcStdCode, stdcVersion, stdcYear, stdcOrgCo
       })
       .then(data => {
         if (data.status === 200) {
-          dispatch({ type: GET_STANDARD_COURSE, payload: data.data.standardCourses[0].standard });
+          dispatch({ type: GET_STANDARD_COURSE, payload: data.data.standardCourses[0] });
           dispatch(fetchSuccess(<IntlMessages id="fetch.standardCourse.get.success.message" />));
           if (callbackFun) callbackFun(data.data.standardCourses[0].standard);
         } else {
