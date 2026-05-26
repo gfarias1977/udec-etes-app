@@ -27,6 +27,7 @@ const ExportButtonGapsSourceStockReport = ({ data }) => {
       headers={headers}
       className="btn btn-primary"
       separator={';'}
+      bom={true}
       filename={`reporte_subproceso_stock_${new Date().toLocaleDateString()}.csv`}>
       <i className="fa fa-file-download" />
       <span> Exportar</span>

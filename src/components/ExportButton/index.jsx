@@ -31,6 +31,7 @@ const ExportButton = ({ data }) => {
       headers={headers}
       className="btn btn-primary"
       separator={';'}
+      bom={true}
       filename={`reporte_standard_por_carrera_${new Date().toLocaleDateString()}.csv`}>
       <i className="fa fa-file-download" />
       <span> Exportar</span>

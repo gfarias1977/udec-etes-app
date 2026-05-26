@@ -35,6 +35,7 @@ const ExportButtonGapPurchasesReport = ({ data }) => {
       headers={headers}
       className="btn btn-primary"
       separator={';'}
+      bom={true}
       filename={`reporte_brecha_compras_${new Date().toLocaleDateString()}.csv`}>
       <i className="fa fa-file-download" />
       <span> Exportar</span>

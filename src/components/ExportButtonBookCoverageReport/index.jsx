@@ -36,6 +36,7 @@ const ExportButtonBookCoverageReport = ({ data }) => {
       headers={headers}
       className="btn btn-primary"
       separator={';'}
+      bom={true}
       filename={`reporte_cobertuba_bibliografias_${new Date().toLocaleDateString()}.csv`}>
       <i className="fa fa-file-download" />
       <span> Exportar</span>

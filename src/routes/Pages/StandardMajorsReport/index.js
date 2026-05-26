@@ -104,12 +104,12 @@ const StandardMayorsReportModule = () => {
 
   useEffect(() => {
     dispatch(
-      getMajors([], debouncedSearchMajorTerm, '', () => {
+      getMajors([], debouncedSearchMajorTerm, filterOptionsMajors, () => {
         //setFilterApplied(!!filterOptions.length || !!debouncedSearchMajorTerm);
         // setMajorsFetched(true);
       }),
     );
-  }, []);
+  }, [dispatch, selectedOrganization]);
 
   useEffect(() => {
     dispatch(
@@ -118,7 +118,7 @@ const StandardMayorsReportModule = () => {
         setStandardsFetched(true);
       }),
     );
-  }, [dispatch, organizationText]);
+  }, [dispatch, organizationText, filterOptionsStandards]);
 
   useEffect(() => {
     if (selectedOrganization != null && selectedPurchaseArea != null && selectedMajor != null && selectedStandard != null) {
