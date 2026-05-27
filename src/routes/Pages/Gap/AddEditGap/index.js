@@ -186,7 +186,7 @@ const AddEditGap = ({ open, onCloseDialog }) => {
                 id="stocks"
                 options={procesess_stock}
                 value={stockText}
-                getOptionLabel={option => (option.procCode !== undefined ? option.procCode + ' ' + option.procMsg : '')}
+                getOptionLabel={option => (option.procCode !== undefined ? option.procCode + ' ' + option.procProctName : '')}
                 style={{ width: '100%' }}
                 renderInput={params => (
                   <TextField
@@ -208,7 +208,7 @@ const AddEditGap = ({ open, onCloseDialog }) => {
                 id="demand"
                 options={procesess_demand}
                 value={demandText}
-                getOptionLabel={option => (option.procCode !== undefined ? option.procCode + ' ' + option.procMsg : '')}
+                getOptionLabel={option => (option.procCode !== undefined ? option.procCode + ' ' + option.procProctName : '')}
                 style={{ width: '100%' }}
                 renderInput={params => (
                   <TextField
@@ -230,7 +230,7 @@ const AddEditGap = ({ open, onCloseDialog }) => {
                 id="standard"
                 options={procesess_standard}
                 value={standardText}
-                getOptionLabel={option => (option.procCode !== undefined ? option.procCode + ' ' + option.procMsg : '')}
+                getOptionLabel={option => (option.procCode !== undefined ? option.procCode + ' ' + option.procProctName : '')}
                 style={{ width: '100%' }}
                 renderInput={params => (
                   <TextField
