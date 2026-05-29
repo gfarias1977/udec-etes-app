@@ -134,7 +134,7 @@ const GapListRow = ({
       <TableCell>{row.procEmailNotification}</TableCell>
       <TableCell>
         {/* {row.status === 'suspended' ? `Suspended by ${row.suspendedBy} (${timeFromNow(row.suspendedAt)})` : row.status} */}
-        {row.procStatus === 'P' ? `Procesado` : 'No Procesado'}
+        {row.procStatus === 'P' ? `En Proceso` : 'Procesado'}
       </TableCell>
       {/* <TableCell>{timeFromNow(row.lastLoginAt)}</TableCell> */}
       {/* <TableCell align="right">{row.emailUsage} GB</TableCell> */}
